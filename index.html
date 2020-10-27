@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Goals App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app" class="container">
+        <div class="columns">
+            <div class="column"></div>
+            <div class="column">
+
+                <div class="field has-text-centeres">
+                    <img src="hero.png" alt="Hero Image">
+                </div>
+                <h1 class="title has-text-centered">
+                    goals
+                </h1>
+                <ul>
+                    <li v-for="goal in goals">
+                        <img src="https://img.icons8.com/ios/24/000000/checked-2.png" alt="">
+                        <span>{{ goal }}</span>
+                    </li>
+                </ul>
+                <div class="field">
+                    <div class="control">
+                        <input type="text" id="goal" class="input is-large" v-model="enteredValue" v-on:keyup.enter="addGoal" placeholder="E.g Build a web app">
+                    </div>
+                </div>
+
+            </div>
+            <div class="column"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="main.js"></script>
+</body>
+</html>
